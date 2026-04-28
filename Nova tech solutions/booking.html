@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service | Nova Tech Support</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="logo.svg" alt="Nova Tech Support logo" class="brand-logo" /><span class="brand-text">Nova Tech Support</span></a>
+      <button class="nav-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="booking.html" aria-current="page">Book Service</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="btn btn-secondary" style="margin-left: 1rem;">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero-section">
+      <div class="container">
+        <p class="eyebrow">Book a Service</p>
+        <h1>Request a professional service visit for your organisation.</h1>
+        <p class="hero-copy">Submit booking details and we will match the right field team to your location, schedule, and service needs.</p>
+      </div>
+    </section>
+
+    <section class="section" id="loginPromptSection" style="display: none; background: #f0f7ff; border: 1px solid #b3d9ff;">
+      <div class="container" style="text-align: center; padding: 2rem 0;">
+        <h2>Please log in to book a service</h2>
+        <p style="margin: 1rem 0; font-size: 1.1rem;">You need to have an account to submit a booking request.</p>
+        <a href="login.html" class="btn btn-primary" style="display: inline-block; margin-right: 1rem;">Login</a>
+        <a href="login.html" class="btn btn-secondary" style="display: inline-block;">Create Account</a>
+      </div>
+    </section>
+
+    <section class="section services-section">
+      <div class="container section-head">
+        <h2>Booking information</h2>
+        <p class="hero-copy">Complete the form to request service delivery for your office, campus, or facility. We support institutional bookings, payment options, and on-site job tracking.</p>
+      </div>
+      <div class="grid cards-grid">
+        <article class="card">
+          <h3>Service Categories</h3>
+          <p><strong>Campus Maintenance:</strong> Facility repairs and grounds upkeep</p>
+          <p><strong>IT Support:</strong> Technical troubleshooting and systems support</p>
+          <p><strong>Facility Inspection:</strong> Safety and compliance audits</p>
+          <p><strong>Electrical Service:</strong> Electrical repairs and installation</p>
+        </article>
+        <article class="card">
+          <h3>What Happens Next</h3>
+          <p>After you submit:</p>
+          <ul style="list-style: inside;">
+            <li>Booking ID generated immediately</li>
+            <li>Confirmation within 24 hours</li>
+            <li>Technician assigned based on location</li>
+            <li>Invoice generated for billing</li>
+            <li>Track status in Client Portal</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="bookingFormSection">
+      <div class="container grid contact-grid">
+        <div class="contact-copy">
+          <h2>Before you book</h2>
+          <p>Make sure you have:</p>
+          <ul>
+            <li>Your organisation name</li>
+            <li>Primary contact person and email</li>
+            <li>Phone number</li>
+            <li>Physical service location</li>
+            <li>Preferred date and time</li>
+            <li>Service type details</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><a href="how-it-works.html" class="btn btn-secondary">Learn more about our process</a></p>
+          <p style="margin-top: 0.75rem;"><a href="pricing.html" class="btn btn-secondary">View pricing guide</a></p>
+        </div>
+        <form class="contact-form" id="bookingForm">
+          <label for="orgName">Organisation Name</label>
+          <input type="text" id="orgName" name="orgName" required />
+
+          <label for="contactName">Contact Person</label>
+          <input type="text" id="contactName" name="contactName" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType" name="serviceType" required>
+            <option value="">Select a service</option>
+            <option value="campus-maintenance">Campus maintenance</option>
+            <option value="it-support">IT support and systems</option>
+            <option value="facility-inspection">Facility inspection</option>
+            <option value="electrical-service">Electrical or safety service</option>
+          </select>
+
+          <label for="address">Service Address</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="details">Additional details</label>
+          <textarea id="details" name="details" rows="4"></textarea>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" name="terms" required />
+            I agree to the service terms and conditions.
+          </label>
+
+          <button type="submit" class="btn btn-primary">Submit Booking</button>
+        </form>
+      </div>
+
+      <div class="container section-head">
+        <h2>Your booking history</h2>
+        <p class="hero-copy">All your service requests are saved with booking IDs and invoice references. Track status and manage from your <a href="client-portal.html">Client Portal</a>.</p>
+      </div>
+      <div class="container" id="bookingHistory"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nova Tech Support. Built for SMEs, NGOs, and schools.</p>
+      <p><a href="terms.html" class="legal-link">Terms & Conditions</a> · <a href="privacy.html" class="legal-link">Privacy Policy</a> · <a href="popia.html" class="legal-link">POPIA Compliance</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Nova Tech Support",
+  "short_name": "Nova Tech",
+  "description": "Local IT support and service booking for businesses, schools, NGOs and homes.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0e27",
+  "theme_color": "#0a0e27",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "utilities", "education"],
+  "prefer_related_applications": false
+}
